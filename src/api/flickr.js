@@ -1,15 +1,15 @@
 import axios from 'axios';
-import { apiConfig } from './key';
+import { apiConfig } from './config';
 
 export const fetchImages = (searchString, pageNumber, successHandler, errorHandler) => {
     axios.get(apiConfig.getUrl, {
             params : {
-                method : 'flickr.photos.search',
+                method : searchString ? apiConfig.getSearchMethod : apiConfig.getRecentMethod,
                 api_key : apiConfig.getKey,
                 tags : searchString, 
-                format : 'json',
+                format : apiConfig.getFormat,
                 page : pageNumber,
-                per_page : 50,
+                per_page : apiConfig.getPerPage,
                 nojsoncallback : 1
                 
             }   
