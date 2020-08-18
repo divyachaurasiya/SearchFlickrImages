@@ -17,12 +17,14 @@ API - Flickr public APIs:
 ### To run code locally
 open terminal window and install all client dependencies: Navigate to the application root directory and run:
 
-shell
+```ruby
 npm install
+```
 After all installations are finished, run client with command:
 
-shell
+```ruby
 npm start
+```
 Then open your app on http://localhost:3000
 
 #### Attaching screenshot for your references
